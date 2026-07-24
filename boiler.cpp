@@ -37,6 +37,13 @@ const std::string yellow = "\x1b[1;93m";
 // Default Classes and Structs
 
 
+
+
+
+
+
+
+
 // solve
 void solve() {
     
