@@ -41,7 +41,27 @@ class A {
             cout << "Hello from A\n";
         }
 };
-clas
+
+class Animal {
+public:
+    virtual void speak() {
+        cout << "Animal sound";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() override {
+        cout << "Woof";
+    }
+};
+
+class Cat : public Animal {
+public:
+    void speak() override {
+        cout << "Meow";
+    }
+};
 
 
 
