@@ -50,6 +50,7 @@ int main() {
 
 
   // Task 3 : Build a Table
+  cout << defaultfloat << setprecision(6); // reset to normal formatting
   cout << underline << "\nTask 3 : Build a Table" << endformat << "\n";
   char* item1 = "Apple";
   double price1 = 1.5;
@@ -69,16 +70,15 @@ int main() {
     Numbers you generally want to right align
   */
 
-  cout << defaultfloat << setprecision(6);
   cout << left << setw(15) << "Item" << right << setw(10) << "Price" << right << setw(12) << "Quantity\n";
 
-  cout << left << setw(15) << item1 << right << setw(10) << fixed << setprecision(2) << price1 
-  << defaultfloat << setprecision(6) << right << setw(12) << quantity1 << "\n";
+  cout << left << setw(15) << item1 << right << setw(10) << fixed << setprecision(2) << price1
+    << defaultfloat << setprecision(6) << right << setw(12) << quantity1 << "\n";
 
-  cout << left << setw(15) << item2 << right << setw(10) << fixed << setprecision(2) << price2 
-  << defaultfloat << setprecision(6) << right << setw(12) << quantity2 << "\n";
+  cout << left << setw(15) << item2 << right << setw(10) << fixed << setprecision(2) << price2
+    << defaultfloat << setprecision(6) << right << setw(12) << quantity2 << "\n";
 
-  cout << left << setw(15) << item3 << right << setw(10) << fixed << setprecision(2) << price3 
-  << defaultfloat << setprecision(6) << right << setw(12) << quantity3 << "\n";
+  cout << left << setw(15) << item3 << right << setw(10) << fixed << setprecision(2) << price3
+    << defaultfloat << setprecision(6) << right << setw(12) << quantity3 << "\n";
 
 }
