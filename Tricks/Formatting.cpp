@@ -16,10 +16,18 @@ int main() {
   cout << setprecision(6);
   cout << left << setw(30) << "6 significant figures" << setw(5) << "->" << right << setw(10) << num << endl;
 
-  cout << fixed << setprecision(6);
+  cout << fixed << setprecision(4);
   cout << left << setw(30) << "6 decimal places" << setw(5) << "->" << right << setw(10) << num << endl;
 
-  cout << defaultfloat << endl;
+  /*
+    fixed is independent of setprecion.
+    after reset with defaultfloat it would still print significant figures are the current setprecision till you reset to setprecision(6)
+    then it prints default 6-significant figures rather than 6-decimal places.
+
+    cout << defaultfloat << setprecision(6) << endl;
+    num = 62.0123456;
+    cout << num << "\n";
+  */
 
 
   // Task 1 : Basic Width
