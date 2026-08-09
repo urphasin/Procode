@@ -13,11 +13,11 @@ int main() {
   cout << underline << "\nTask 0: Decimal Point vs Significant Figures" << endformat << "\n";
 
   double num = 0.020137809;
-  cout << setprecision(6);
-  cout << left << setw(30) << "6 significant figures" << setw(5) << "->" << right << setw(10) << num << endl;
+  cout << setprecision(7);
+  cout << left << setw(30) << "7 significant figures" << setw(5) << "->" << right << setw(10) << num << endl;
 
   cout << fixed << setprecision(4);
-  cout << left << setw(30) << "6 decimal places" << setw(5) << "->" << right << setw(10) << num << endl;
+  cout << left << setw(30) << "4 decimal places" << setw(5) << "->" << right << setw(10) << num << endl;
 
   /*
     fixed is independent of setprecion.
