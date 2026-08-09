@@ -21,7 +21,8 @@ int main() {
 
   /*
     fixed is independent of setprecion.
-    after reset with defaultfloat it would still print significant figures are the current setprecision till you reset to setprecision(6)
+    after reset with defaultfloat it would still print significant figures, 
+    at the current setprecision till you reset to setprecision(6)
     then it prints default 6-significant figures rather than 6-decimal places.
 
     cout << defaultfloat << setprecision(6) << endl;
@@ -48,5 +49,12 @@ int main() {
   cout << c << "\n";
 
 
-  // Task 3 : 
+  // Task 3 : Build a Table
+  cout << underline << "\nTask 3 : Build a Table" << endformat << "\n";
+  /*
+    Texts/labels you generally want to left align
+    Numbers you generally want to right align
+  */
+  cout << defaultfloat << setprecision(6);
+  cout << 
 }
