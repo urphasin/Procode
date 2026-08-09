@@ -21,7 +21,7 @@ int main() {
 
   /*
     fixed is independent of setprecion.
-    after reset with defaultfloat it would still print significant figures, 
+    after reset with defaultfloat it would still print significant figures,
     at the current setprecision till you reset to setprecision(6)
     then it prints default 6-significant figures rather than 6-decimal places.
 
@@ -37,13 +37,13 @@ int main() {
   cout << left << setw(15) << "John" << right << setw(10) << "25\n";
   cout << left << setw(15) << "Sarah" << right << setw(10) << "27\n";
 
-  
+
   // Task 2 : Decimal Formatting
   cout << underline << "\nTask 2 : Decimal Formatting" << endformat << "\n";
   double a = 12.345678;
   double b = 98.1;
   double c = 7.0;
-  
+
   cout << fixed << setprecision(2) << a << "\n";
   cout << b << "\n";
   cout << c << "\n";
@@ -51,10 +51,34 @@ int main() {
 
   // Task 3 : Build a Table
   cout << underline << "\nTask 3 : Build a Table" << endformat << "\n";
+  char* item1 = "Apple";
+  double price1 = 1.5;
+  int quantity1 = 4;
+
+  char* item2 = "Banana";
+  double price2 = 0.75;
+  int quantity2 = 12;
+
+  char* item3 = "Orange";
+  double price3 = 2.25;
+  int quantity3 = 3;
+
+
   /*
     Texts/labels you generally want to left align
     Numbers you generally want to right align
   */
+
   cout << defaultfloat << setprecision(6);
-  cout << 
+  cout << left << setw(15) << "Item" << right << setw(10) << "Price" << right << setw(12) << "Quantity\n";
+
+  cout << left << setw(15) << item1 << right << setw(10) << fixed << setprecision(2) << price1 
+  << defaultfloat << setprecision(6) << right << setw(12) << quantity1 << "\n";
+
+  cout << left << setw(15) << item2 << right << setw(10) << fixed << setprecision(2) << price2 
+  << defaultfloat << setprecision(6) << right << setw(12) << quantity2 << "\n";
+
+  cout << left << setw(15) << item3 << right << setw(10) << fixed << setprecision(2) << price3 
+  << defaultfloat << setprecision(6) << right << setw(12) << quantity3 << "\n";
+
 }
