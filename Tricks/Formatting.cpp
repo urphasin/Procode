@@ -52,7 +52,7 @@ int main() {
   // Task 3 : Build a Table
   cout << defaultfloat << setprecision(6); // reset to normal formatting
   cout << underline << "\nTask 3 : Build a Table" << endformat << "\n";
-  char* item1 = "Apple"; // make char* then compiler cries because "Apple" is string literal not modifiable. 
+  const char* item1 = "Apple"; // make char* then compiler cries because "Apple" is string literal not modifiable. 
   double price1 = 1.5;
   int quantity1 = 4;
 
@@ -70,15 +70,94 @@ int main() {
     Numbers you generally want to right align
   */
 
-  cout << left << setw(15) << "Item" << right << setw(10) << "Price" << right << setw(12) << "Quantity\n";
+  cout << left << setw(15) << "Item"
+    << right << setw(10) << "Price"
+    << right << setw(12) << "Quantity"
+    << "\n";
 
-  cout << left << setw(15) << item1 << right << setw(10) << fixed << setprecision(2) << price1
-    << defaultfloat << setprecision(6) << right << setw(12) << quantity1 << "\n";
+  cout << left << setw(15) << item1
+    << right << setw(10) << fixed << setprecision(2) << price1
+    << right << setw(12) << quantity1
+    << "\n";
 
-  cout << left << setw(15) << item2 << right << setw(10) << fixed << setprecision(2) << price2
-    << defaultfloat << setprecision(6) << right << setw(12) << quantity2 << "\n";
+  cout << left << setw(15) << item2
+    << right << setw(10) << fixed << setprecision(2) << price2
+    << right << setw(12) << quantity2
+    << "\n";
 
-  cout << left << setw(15) << item3 << right << setw(10) << fixed << setprecision(2) << price3
-    << defaultfloat << setprecision(6) << right << setw(12) << quantity3 << "\n";
+  cout << left << setw(15) << item3
+    << right << setw(10) << fixed << setprecision(2) << price3
+    << right << setw(12) << quantity3
+    << "\n";
 
+
+  // Task 4 : Change the Appearance
+  cout << underline << "\nTask 4 : Change the Appearance" << endformat << "\n";
+  cout << "C++ " << 42 << " " << 3.14159 << "\n";
+
+  cout << left << setw(15) << "C++"
+    << right << setw(10) << 42
+    << right << setw(10) << fixed << setprecision(3) << 3.14159
+    << "\n";
+
+
+  // Task 5 : Manipulator Persistence
+  cout << underline << "\nTask 5 : Manipulator Persistence" << endformat << "\n";
+  /* Predict before you run */
+  cout << fixed << setprecision(2);
+  cout << 12.345 << "\n";
+  cout << 7.1 << "\n";
+  cout << setprecision(4);
+  cout << 8.123456 << "\n";
+  cout << setw(10) << 42 << "\n";
+  cout << 99 << "\n";
+
+
+  // Task 6 : Full Control
+  cout << underline << "\nTask 6 : Full Control " << endformat << "\n";
+  string name;
+  int age;
+  double gpa;
+  string height;
+
+  cout << "Enter the following, \n\n";
+
+  cout << "Name: ";
+  cin >> name;
+
+  cout << "Age: ";
+  cin >> age;
+
+  cout << "GPA: ";
+  cin >> gpa;
+
+  cout << "Height: ";
+  cin >> height;
+
+
+  cout << "\n\n==============================================\n";
+  cout << "\t\t STUDENT REPORT\n";
+  cout << "==============================================\n\n";
+
+  cout << left << setw(8) << "Name:"
+    << right << setw(20) << name
+    << "\n";
+
+  cout << left << setw(8) << "Age:"
+    << right << setw(20) << age
+    << "\n";
+
+  cout << left << setw(8) << "GPA:"
+    << right << setw(20) << fixed << setprecision(2) << gpa
+    << "\n";
+    
+  cout << left << setw(8) << "Height:"
+    << right << setw(20) << height
+    << "\n";
+
+  // reset the io format manipulator
+  cout << setprecision(6) << defaultfloat;
+  
+  
+  return 0;
 }
