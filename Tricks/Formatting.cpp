@@ -52,15 +52,15 @@ int main() {
   // Task 3 : Build a Table
   cout << defaultfloat << setprecision(6); // reset to normal formatting
   cout << underline << "\nTask 3 : Build a Table" << endformat << "\n";
-  char* item1 = "Apple";
+  char* item1 = "Apple"; // make char* then compiler cries because "Apple" is string literal not modifiable. 
   double price1 = 1.5;
   int quantity1 = 4;
 
-  char* item2 = "Banana";
+  const char* item2 = "Banana"; // fix: make char* into const char*, then the left is unmodifiable and so it the "Banana" on the right.
   double price2 = 0.75;
   int quantity2 = 12;
 
-  char* item3 = "Orange";
+  const char* item3 = "Orange";
   double price3 = 2.25;
   int quantity3 = 3;
 
