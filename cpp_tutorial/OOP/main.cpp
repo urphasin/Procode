@@ -62,6 +62,17 @@ public:
         cout << "Meow";
     }
 };
+class Base {
+public:
+    ~Base() { cout << "Base destructor\n"; }   // NOT virtual
+};
+class Derived : public Base {
+public:
+    ~Derived() { cout << "Derived destructor\n"; }
+};
+
+
+
 
 
 
@@ -77,8 +88,10 @@ void solve() {
 
 // MAIN
 int main() {
-  // Write below this line
-  
+    // Write below this line
+    
+    Base* p = new Derived();
+    delete p;
   
   
   return 0;
