@@ -29,8 +29,8 @@ using namespace std;
 
 // CONSTANTS
 const double pi = M_PI;
-const std::string endColor = "\x1b[0m";
-const std::string yellow = "\x1b[1;93m";
+const char* end = "\x1b[0m";
+const char* yellow = "\x1b[1;93m";
 
 
 // Default Classes and Structs
